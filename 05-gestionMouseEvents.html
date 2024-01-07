@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+</head>
+<body>
+    <h1>
+        La decouverte du JQUERY
+    </h1>
+    <p class="p1">
+        Un premier paragraphe
+    </p>
+    <p class="p2">
+        Un deuxieme paragraphe
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+         $('p').dblclick(function(){
+            $(this).hide();
+        });
+
+        // $(".p1").mouseenter(function(){
+        //     $(".p2").hide();
+        // });
+
+        // $(".p1").mouseleave(function(){
+        //     $(".p2").show();
+        // })
+
+        // $(".p1").hover(function(){
+        //     $(".p2").hide();
+        // }, function(){
+        // $(".p2").show();
+        // });
+
+        $('.p1').mousedown(function(){
+            $('.p2').hide();
+        })
+        $('.p1').mouseup(function(){
+            $('.p2').show();
+        })
+
+});
+    
+       
+    </script>
+</body>
+</html>

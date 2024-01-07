@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY Event</title>
+</head>
+<body>
+    <h1>
+        La decouverte du JQUERY
+    </h1>
+    <p class="para">
+        Un premier paragraphe
+    </p>
+    <p >
+        Un deuxieme paragraphe
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        /* entourer tout le code jquery avec le $(document).ready(
+             tout notre script ici
+        ); pour être sûr que tout est chargé et prèt sur la page d'abord*/
+        $(document).ready(function(){
+            $('.para').click(function(e){
+                $('h1').hide();
+            });
+        });
+    </script>
+</body>
+</html>
