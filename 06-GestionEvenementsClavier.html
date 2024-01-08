@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decouverte de JQuery</title>
+</head>
+<body>
+    <h1>
+        Gestion d'évenements en JQuery
+    </h1>
+    <label for="prenom">Entrez votre prenom: 
+    </label>
+
+    <input type="text" name="prenom" id="prenom">
+    <p>
+        Dernier caractère tapé : <span id="ascii"></span>
+    </p>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('input').keydown(function(){
+            //     $(this).css("background-color", "#000000");
+            // });
+
+            // $('input').keyup(function(){
+            //     $(this).css("background-color", "#dddddd");
+            // });
+                $('#prenom').keypress(function(event){
+                    var touche = String.fromCharCode(event.which);
+                    $('#ascii').text(event.which);
+                });
+        });
+    </script>
+</body>
+</html>
